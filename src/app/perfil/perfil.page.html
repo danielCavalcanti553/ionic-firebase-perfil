@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons slot="start">
+          <ion-back-button></ion-back-button>
+      </ion-buttons>
+      <ion-title>Cliente Cadastro</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+    <img src="{{imagem}}" width="100%" />
+
+    <ion-item>
+        <input type="file" (change)="enviaArquivo($event)"/>
+    </ion-item> 
+
+    <form [formGroup]="formGroup">
+      <ion-list>
+        <ion-item>
+          <ion-label floating>Nome</ion-label>
+          <ion-input formControlName="nome" value="{{perfil.nome}}" type="text">
+            </ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label floating>Sobrenome</ion-label>
+          <ion-input formControlName="sobrenome" value="{{perfil.sobrenome}}" type="text">
+            </ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label floating>Telefone</ion-label>
+            <ion-input formControlName="telefone"  value="{{perfil.telefone}}" type="text">
+              </ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label floating>E-mail</ion-label>
+            <ion-input formControlName="email"  value="{{perfil.email}}" type="text">
+              </ion-input>
+        </ion-item>
+    </ion-list>
+    <ion-button expand="full" (click)="atualizar()">Atualizar</ion-button>
+
+    </form>
+</ion-content>
