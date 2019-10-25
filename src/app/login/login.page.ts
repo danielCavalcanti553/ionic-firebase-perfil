@@ -20,12 +20,14 @@ export class LoginPage implements OnInit {
       this.menuCtrl.swipeEnable(false);
     }
 
-  ngOnInit() { }
+  ngOnInit() {
+
+  }
 
   login(){
     this.afAuth.auth.signInWithEmailAndPassword( // Função para realizar login com
       this.email,this.senha).then(()=>{         // e-mail e senha
-        
+        localStorage.setItem("uid",this.afAuth.auth.currentUser.uid);
         this.menuCtrl.swipeEnable(true); // ativiar o menu
         this.router.navigate(['/home']); // redirecionar para home
 
@@ -43,5 +45,12 @@ export class LoginPage implements OnInit {
   toast.present();
 }
 
+  goNovoUsuario(){
+    this.router.navigate(['/cadastro-usuario']); 
+  }
+
+  goNovaSenha(){
+    this.router.navigate(['/recuperar-senha']);
+  }
 
 }

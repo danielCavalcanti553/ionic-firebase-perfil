@@ -20,6 +20,11 @@ export class AppComponent {
       title: 'Perfil',
       url: '/perfil',
       icon: 'home'
+    },
+    {
+      title: 'Logoff',
+      url: '/logoff',
+      icon: 'home'
     }
   ];
 

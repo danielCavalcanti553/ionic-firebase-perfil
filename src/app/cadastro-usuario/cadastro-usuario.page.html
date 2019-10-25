@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Login</ion-title>
+    <ion-title>Nova Conta</ion-title>
   </ion-toolbar>
 </ion-header>
 <ion-content padding>
@@ -14,9 +14,6 @@
       <ion-input type="password" [(ngModel)]="senha"></ion-input>
     </ion-item>
   </ion-list>
-
-  <ion-button expand="full" (click)="login()">Entrar</ion-button>
-  <ion-button expand="full" (click)="goNovoUsuario()">Nova Conta</ion-button>
-  <ion-button expand="full" (click)="goNovaSenha()">Esqueci a senha</ion-button>
+  <ion-button expand="full" (click)="cadastrar()">Cadastrar</ion-button>
 </ion-content>
 
