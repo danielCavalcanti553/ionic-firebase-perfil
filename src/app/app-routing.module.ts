@@ -17,7 +17,8 @@ const routes: Routes = [
   { path: 'cadastro-usuario', loadChildren: './cadastro-usuario/cadastro-usuario.module#CadastroUsuarioPageModule' },
   { path: 'logoff', loadChildren: './logoff/logoff.module#LogoffPageModule',canActivate: [AuthGuardService] },
   { path: 'recuperar-senha', loadChildren: './recuperar-senha/recuperar-senha.module#RecuperarSenhaPageModule' },
-  { path: 'location', loadChildren: './location/location.module#LocationPageModule' }
+  { path: 'location', loadChildren: './location/location.module#LocationPageModule' },
+  { path: 'pagamento-pay-pal', loadChildren: './pagamento-pay-pal/pagamento-pay-pal.module#PagamentoPayPalPageModule' }
 ];
 
 @NgModule({

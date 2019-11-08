@@ -18,7 +18,7 @@ export class LocationPage implements OnInit {
   constructor(private geolocation: Geolocation) { }
 
   ngOnInit() {
-
+    /*
     mapboxgl.accessToken = environment.mapbox.accessToken;
       this.map = new mapboxgl.Map({
         container: 'map',

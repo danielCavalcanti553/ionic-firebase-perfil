@@ -15,6 +15,7 @@ import { AngularFireStorageModule } from '@angular/fire/storage';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AuthGuardService } from './services/auth-guard.service';
 import { Geolocation } from '@ionic-native/geolocation/ngx';
+import { PayPal } from '@ionic-native/paypal/ngx';
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
@@ -32,7 +33,8 @@ import { Geolocation } from '@ionic-native/geolocation/ngx';
     SplashScreen,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     AuthGuardService,
-    Geolocation
+    Geolocation,
+    PayPal
   ],
   bootstrap: [AppComponent]
 })
