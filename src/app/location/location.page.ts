@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Geolocation } from '@ionic-native/geolocation/ngx';
+
 import * as mapboxgl from 'mapbox-gl';
 import { environment } from 'src/environments/environment';
 
@@ -10,16 +11,17 @@ import { environment } from 'src/environments/environment';
 })
 export class LocationPage implements OnInit {
   map: mapboxgl.Map;
-  
+
   style = 'mapbox://styles/mapbox/streets-v11';
   lat = -22.8994473;
   lng = -43.5589886;
                 
-  constructor(private geolocation: Geolocation) { }
+  constructor(private geolocation: Geolocation) {
+    (mapboxgl as typeof mapboxgl).accessToken = environment.mapbox.accessToken;
+  }
 
   ngOnInit() {
-    /*
-    mapboxgl.accessToken = environment.mapbox.accessToken;
+    
       this.map = new mapboxgl.Map({
         container: 'map',
         style: this.style,
@@ -27,7 +29,7 @@ export class LocationPage implements OnInit {
         center: [this.lng, this.lat]
     });
     // Add map controls
-    this.map.addControl(new mapboxgl.NavigationControl());
+    //this.map.addControl(new mapboxgl.NavigationControl());
 
     /*
     this.geolocation.getCurrentPosition().then((resp) => {

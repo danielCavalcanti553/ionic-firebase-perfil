@@ -16,6 +16,7 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AuthGuardService } from './services/auth-guard.service';
 import { Geolocation } from '@ionic-native/geolocation/ngx';
 import { PayPal } from '@ionic-native/paypal/ngx';
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
@@ -26,7 +27,9 @@ import { PayPal } from '@ionic-native/paypal/ngx';
     AngularFireModule.initializeApp(firebaseConfig), // Inicia Firebase com nossas conf
     AngularFirestoreModule, // Banco de dados 
     AngularFireAuthModule,  // Autenticação
-    AngularFireStorageModule // Armazenamento Arquivos
+    AngularFireStorageModule, // Armazenamento Arquivos
+    HttpClientModule
+
   ],
   providers: [
     StatusBar,
